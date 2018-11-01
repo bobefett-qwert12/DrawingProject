@@ -19,7 +19,9 @@ public class DrawingView: UIView
         // Drawing code
         createStickFigure().stroke()
         drawTurtle().stroke()
-        drawPumpkin().stroke()
+        drawPumpkin1().stroke()
+        drawPumpkin2().stroke()
+        drawPumpkin3().stroke()
     }
     
     private func createStickFigure() -> UIBezierPath
@@ -59,7 +61,7 @@ public class DrawingView: UIView
         return logo
     }
     
-    private func drawPumpkin() -> UIBezierPath
+    private func drawPumpkin1() -> UIBezierPath
     {
         let pump : UIBezierPath = UIBezierPath()
         UIColor.orange.setFill()
@@ -72,6 +74,13 @@ public class DrawingView: UIView
                     clockwise: true)
         pump.close()
         pump.fill()
+        
+        return pump
+    }
+    
+    private func drawPumpkin2() -> UIBezierPath
+    {
+        let pump : UIBezierPath = UIBezierPath()
         
         UIColor.black.setFill()
         pump.move(to: CGPoint(x: 80, y: 80))
@@ -99,6 +108,13 @@ public class DrawingView: UIView
         pump.close()
         pump.fill()
         
+        return pump
+    }
+    
+    private func drawPumpkin3() -> UIBezierPath
+    {
+        let pump : UIBezierPath = UIBezierPath()
+        
         UIColor.green.setStroke()
         UIColor.green.setFill()
         pump.move(to: CGPoint(x: 95, y: 61))
@@ -109,5 +125,4 @@ public class DrawingView: UIView
         
         return pump
     }
-
 }
