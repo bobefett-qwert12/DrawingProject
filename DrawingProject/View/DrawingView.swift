@@ -17,13 +17,97 @@ public class DrawingView: UIView
     public override func draw(_ rect: CGRect) -> Void
     {
         // Drawing code
+        createStickFigure().stroke()
+        drawTurtle().stroke()
+        drawPumpkin().stroke()
     }
     
     private func createStickFigure() -> UIBezierPath
     {
         let figure : UIBezierPath = UIBezierPath()
         
+        UIColor.blue.setStroke()
+        figure.lineWidth = 8.0
+        figure.addArc(withCenter: CGPoint(x: 200, y: 200),
+                      radius: CGFloat(20),
+                      startAngle: CGFloat(0),
+                      endAngle: CGFloat(2) * CGFloat.pi,
+                      clockwise: true)
+        
+        figure.move(to: CGPoint(x: 200, y: 220))
+        figure.addLine(to: CGPoint(x: 200, y: 270))
+        figure.move(to: CGPoint(x: 180, y: 240))
+        figure.addLine(to: CGPoint(x: 220, y: 240))
+        figure.move(to: CGPoint(x: 200, y: 270))
+        figure.addLine(to: CGPoint(x: 180, y: 300))
+        figure.move(to: CGPoint(x: 200, y: 270))
+        figure.addLine(to: CGPoint(x: 220, y: 300))
+        
         return figure
+    }
+    
+    private func drawTurtle() -> UIBezierPath
+    {
+        let logo : UIBezierPath = UIBezierPath()
+        UIColor.white.setFill()
+        logo.move(to: CGPoint(x: 50, y: 200))
+        logo.addLine(to: CGPoint(x: 100, y: 250))
+        logo.addLine(to: CGPoint(x: 50, y: 300))
+        logo.close()
+        logo.fill()
+        
+        return logo
+    }
+    
+    private func drawPumpkin() -> UIBezierPath
+    {
+        let pump : UIBezierPath = UIBezierPath()
+        UIColor.orange.setFill()
+        UIColor.orange.setStroke()
+        
+        pump.addArc(withCenter: CGPoint(x: 100, y: 100),
+                    radius: CGFloat(40),
+                    startAngle: CGFloat(0),
+                    endAngle: CGFloat(2) * CGFloat.pi,
+                    clockwise: true)
+        pump.close()
+        pump.fill()
+        
+        UIColor.black.setFill()
+        pump.move(to: CGPoint(x: 80, y: 80))
+        pump.addLine(to: CGPoint(x: 95, y: 90))
+        pump.addLine(to: CGPoint(x: 85, y: 95))
+        pump.close()
+        pump.fill()
+        
+        pump.move(to: CGPoint(x: 120, y: 80))
+        pump.addLine(to: CGPoint(x: 105, y: 90))
+        pump.addLine(to: CGPoint(x: 115, y: 95))
+        pump.close()
+        pump.fill()
+        
+        pump.move(to: CGPoint(x:100, y: 93))
+        pump.addLine(to: CGPoint(x: 105, y: 103))
+        pump.addLine(to: CGPoint(x: 95, y: 103))
+        pump.close()
+        pump.fill()
+        
+        pump.move(to: CGPoint(x: 80, y: 110))
+        pump.addLine(to: CGPoint(x: 120, y: 110))
+        pump.addLine(to: CGPoint(x: 110, y: 130))
+        pump.addLine(to: CGPoint(x: 90, y: 130))
+        pump.close()
+        pump.fill()
+        
+        UIColor.green.setStroke()
+        UIColor.green.setFill()
+        pump.move(to: CGPoint(x: 95, y: 61))
+        pump.addLine(to: CGPoint(x: 115, y: 50))
+        pump.addLine(to: CGPoint(x: 105, y: 61))
+        pump.close()
+        pump.fill()
+        
+        return pump
     }
 
 }
