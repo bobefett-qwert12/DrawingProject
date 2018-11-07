@@ -12,7 +12,40 @@ private let reuseIdentifier = "artIdentifier"
 
 public class ArtCollectionViewController: UICollectionViewController
 {
-
+    //MARK: Data members for the creativity screen
+    
+    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    private let itemsPerRowCompact : CGFloat = 4
+    private let itemsPerRowNormal : CGFloat = 6
+    
+    private let creativeCS : [UIImage?] =
+    {
+        return [
+            UIImage(named: "BobRossMeme"),
+            UIImage(named: "canHaz"),
+            UIImage(named: "PersonalArt"),
+            UIImage(named: "rarePepe"),
+            UIImage(named: "RyanPerkins"),
+            UIImage(named: "RyanPerkinsJavaHaiku"),
+            UIImage(named: "RyanPerkinsMainframeHaiku"),
+            UIImage(named: "RyanPerkinsSwiftHaiku")
+        ]
+    }()
+    
+    private let labels : [String] =
+    {
+        return [
+            "Bob Ross Meme",
+            "Cat Art",
+            "Code Art",
+            "Rare Pepe",
+            "My Octocat",
+            "Java Haiku",
+            "Mainframe Haiku",
+            "Swift Haiku"
+        ]
+    }()
+    
     public override func viewDidLoad()
     {
         super.viewDidLoad()
