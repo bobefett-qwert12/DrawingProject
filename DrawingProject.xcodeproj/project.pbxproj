@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8BA67E1A2193386D004EFAC6 /* ArtCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA67E192193386D004EFAC6 /* ArtCollectionViewController.swift */; };
+		8BA67E1C21934AB1004EFAC6 /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA67E1B21934AB1004EFAC6 /* ArtCell.swift */; };
 		8BAC3692218B3C53007456B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC3691218B3C53007456B6 /* AppDelegate.swift */; };
 		8BAC3694218B3C53007456B6 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC3693218B3C53007456B6 /* DrawingViewController.swift */; };
 		8BAC3697218B3C53007456B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAC3695218B3C53007456B6 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		8BA67E192193386D004EFAC6 /* ArtCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCollectionViewController.swift; sourceTree = "<group>"; };
+		8BA67E1B21934AB1004EFAC6 /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
 		8BAC368E218B3C53007456B6 /* DrawingProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BAC3691218B3C53007456B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BAC3693218B3C53007456B6 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				8BAC3695218B3C53007456B6 /* Main.storyboard */,
 				8BAC369A218B3C56007456B6 /* LaunchScreen.storyboard */,
 				8BAC36A6218B4B63007456B6 /* DrawingView.swift */,
+				8BA67E1B21934AB1004EFAC6 /* ArtCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			files = (
 				8BAC36A7218B4B63007456B6 /* DrawingView.swift in Sources */,
 				8BAC3694218B3C53007456B6 /* DrawingViewController.swift in Sources */,
+				8BA67E1C21934AB1004EFAC6 /* ArtCell.swift in Sources */,
 				8BA67E1A2193386D004EFAC6 /* ArtCollectionViewController.swift in Sources */,
 				8BAC3692218B3C53007456B6 /* AppDelegate.swift in Sources */,
 			);

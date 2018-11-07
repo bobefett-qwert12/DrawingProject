@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,14 +56,36 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="artIdentifier" id="KbV-rv-6qI">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="artIdentifier" id="KbV-rv-6qI" customClass="ArtCell" customModule="DrawingProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R1F-Ck-VZH">
+                                            <rect key="frame" x="-87" y="-40" width="256" height="140"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aie-FT-VwZ">
+                                            <rect key="frame" x="0.0" y="39" width="100" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="R1F-Ck-VZH" firstAttribute="top" secondItem="KbV-rv-6qI" secondAttribute="topMargin" constant="-48" id="3ys-19-p4D"/>
+                                    <constraint firstItem="aie-FT-VwZ" firstAttribute="width" secondItem="KbV-rv-6qI" secondAttribute="width" id="6BW-Qy-9gf"/>
+                                    <constraint firstItem="R1F-Ck-VZH" firstAttribute="leading" secondItem="KbV-rv-6qI" secondAttribute="leadingMargin" constant="-95" id="BTv-zz-UId"/>
+                                    <constraint firstItem="aie-FT-VwZ" firstAttribute="centerY" secondItem="KbV-rv-6qI" secondAttribute="centerY" id="GQi-zr-6SP"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="R1F-Ck-VZH" secondAttribute="trailing" constant="-77" id="XzS-po-GXH"/>
+                                    <constraint firstItem="aie-FT-VwZ" firstAttribute="centerX" secondItem="KbV-rv-6qI" secondAttribute="centerX" id="YXo-lr-Sgj"/>
+                                    <constraint firstAttribute="bottom" secondItem="R1F-Ck-VZH" secondAttribute="bottom" id="YdW-xs-jyW"/>
+                                    <constraint firstItem="R1F-Ck-VZH" firstAttribute="width" secondItem="KbV-rv-6qI" secondAttribute="width" id="gy9-j5-D9k"/>
+                                </constraints>
+                                <size key="customSize" width="100" height="100"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
