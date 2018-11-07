@@ -10,9 +10,11 @@ import UIKit
 
 private let reuseIdentifier = "artIdentifier"
 
-public class ArtCollectionViewController: UICollectionViewController {
+public class ArtCollectionViewController: UICollectionViewController
+{
 
-    public override func viewDidLoad() {
+    public override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -28,7 +30,8 @@ public class ArtCollectionViewController: UICollectionViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
     }
@@ -36,18 +39,21 @@ public class ArtCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    public override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    public override func numberOfSections(in collectionView: UICollectionView) -> Int
+    {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
 
-    public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
         // #warning Incomplete implementation, return the number of items
         return 0
     }
 
-    public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         // Configure the cell
@@ -59,29 +65,34 @@ public class ArtCollectionViewController: UICollectionViewController {
 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
-    public override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+    public override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool
+    {
         return true
     }
     */
 
     /*
     // Uncomment this method to specify if the specified item should be selected
-    public override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+    public override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool
+    {
         return true
     }
     */
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    public override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+    public override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool
+    {
         return false
     }
 
-    public override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+    public override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool
+    {
         return false
     }
 
-    public override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+    public override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?)
+    {
     
     }
     */
