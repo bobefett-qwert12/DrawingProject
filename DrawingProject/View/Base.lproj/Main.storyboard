@@ -84,6 +84,10 @@
                                     <constraint firstItem="R1F-Ck-VZH" firstAttribute="leading" secondItem="KbV-rv-6qI" secondAttribute="leading" id="o7s-Qk-9DS"/>
                                     <constraint firstItem="R1F-Ck-VZH" firstAttribute="top" secondItem="KbV-rv-6qI" secondAttribute="top" id="vBv-9v-VsH"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="artImage" destination="R1F-Ck-VZH" id="UzR-nQ-R4c"/>
+                                    <outlet property="artLabel" destination="aie-FT-VwZ" id="lKJ-uX-faS"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
