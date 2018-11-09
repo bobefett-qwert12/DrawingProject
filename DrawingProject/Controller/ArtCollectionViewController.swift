@@ -24,6 +24,7 @@ public class ArtCollectionViewController: UICollectionViewController
             UIImage(named: "BobRossMeme"),
             UIImage(named: "canHaz"),
             UIImage(named: "rarePepe"),
+            UIImage(named: "thisIsFine"),
             UIImage(named: "PersonalArt"),
             UIImage(named: "RyanPerkins"),
             UIImage(named: "RyanPerkinsJavaHaiku"),
@@ -38,6 +39,7 @@ public class ArtCollectionViewController: UICollectionViewController
             "Bob Ross Meme",
             "Cat Art",
             "Rare Pepe",
+            "This is fine",
             "Code Art",
             "My Octocat",
             "Java Haiku",
@@ -54,9 +56,6 @@ public class ArtCollectionViewController: UICollectionViewController
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -87,11 +86,13 @@ public class ArtCollectionViewController: UICollectionViewController
 
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
     
-        // Configure the cell
+        artCell.backgroundColor = .blue
+        artCell.artImage.image = creativeCS[indexPath.row]
+        artCell.artLabel.text = labels[indexPath.row]
     
-        return cell
+        return artCell
     }
 
     // MARK: UICollectionViewDelegate
