@@ -88,7 +88,7 @@ public class ArtCollectionViewController: UICollectionViewController
     {
         let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
     
-        artCell.backgroundColor = .blue
+        artCell.backgroundColor = .green
         artCell.artImage.image = creativeCS[indexPath.row]
         artCell.artLabel.text = labels[indexPath.row]
     
@@ -109,7 +109,19 @@ public class ArtCollectionViewController: UICollectionViewController
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
     
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               insetForSectionAt section: Int) -> UIEdgeInsets
+    {
+        return sectionInsets
+    }
     
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return sectionInsets.left
+    }
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     public override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool

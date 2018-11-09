@@ -63,11 +63,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R1F-Ck-VZH">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R1F-Ck-VZH">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="184"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aie-FT-VwZ">
-                                            <rect key="frame" x="70" y="209" width="60" height="21"/>
+                                            <rect key="frame" x="0.0" y="195" width="200" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="ua9-1F-YnQ"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -76,13 +79,13 @@
                                 </view>
                                 <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="aie-FT-VwZ" firstAttribute="top" secondItem="R1F-Ck-VZH" secondAttribute="bottom" constant="9" id="0nC-AH-pYz"/>
-                                    <constraint firstAttribute="trailing" secondItem="R1F-Ck-VZH" secondAttribute="trailing" id="ETL-Y1-ZnQ"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="aie-FT-VwZ" secondAttribute="bottom" constant="20" id="WVJ-iu-895"/>
-                                    <constraint firstItem="aie-FT-VwZ" firstAttribute="leading" secondItem="KbV-rv-6qI" secondAttribute="leadingMargin" constant="54" id="bOI-Kf-SjC"/>
-                                    <constraint firstItem="R1F-Ck-VZH" firstAttribute="centerX" secondItem="aie-FT-VwZ" secondAttribute="centerX" id="fyt-Qn-Mxh"/>
-                                    <constraint firstItem="R1F-Ck-VZH" firstAttribute="leading" secondItem="KbV-rv-6qI" secondAttribute="leading" id="o7s-Qk-9DS"/>
-                                    <constraint firstItem="R1F-Ck-VZH" firstAttribute="top" secondItem="KbV-rv-6qI" secondAttribute="top" id="vBv-9v-VsH"/>
+                                    <constraint firstItem="R1F-Ck-VZH" firstAttribute="trailing" secondItem="aie-FT-VwZ" secondAttribute="trailing" id="4Qe-Bs-SrL"/>
+                                    <constraint firstAttribute="trailing" secondItem="R1F-Ck-VZH" secondAttribute="trailing" id="VHW-o5-Mgc"/>
+                                    <constraint firstItem="R1F-Ck-VZH" firstAttribute="leading" secondItem="aie-FT-VwZ" secondAttribute="leading" id="gwE-ha-l1w"/>
+                                    <constraint firstItem="aie-FT-VwZ" firstAttribute="top" secondItem="R1F-Ck-VZH" secondAttribute="bottom" constant="3" id="jx7-Qr-qPE"/>
+                                    <constraint firstItem="R1F-Ck-VZH" firstAttribute="leading" secondItem="KbV-rv-6qI" secondAttribute="leading" id="k23-uI-F4R"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="aie-FT-VwZ" secondAttribute="bottom" constant="31" id="s1y-Wh-ERn"/>
+                                    <constraint firstItem="R1F-Ck-VZH" firstAttribute="top" secondItem="KbV-rv-6qI" secondAttribute="top" id="zUa-EG-8fg"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="artImage" destination="R1F-Ck-VZH" id="UzR-nQ-R4c"/>
